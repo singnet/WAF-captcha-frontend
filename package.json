@@ -1,5 +1,5 @@
 {
-  "name": "waf-captcha-frontend",
+  "name": "@singnet/waf-captcha-frontend",
   "version": "0.0.1",
   "description": "is a lightweight JavaScript/TypeScript library that provides seamless integration with AWS WAF Captcha for fetch-based HTTP requests. The package handles captcha challenges transparently, intercepting requests and displaying captcha modals when required by AWS WAF.",
   "main": "dist/bundle.cjs.js",
@@ -10,6 +10,9 @@
     "build": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly"
   },
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com/"
+  }
   "keywords": [],
   "author": "",
   "license": "ISC",
