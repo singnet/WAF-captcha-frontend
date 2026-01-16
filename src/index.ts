@@ -1,0 +1,1 @@
+export { createCaptchaFetchHandler } from './createCaptchaFetchHandler';

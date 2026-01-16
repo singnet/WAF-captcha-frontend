@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES2017",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "strict": true,
+    "skipLibCheck": true,
+
+    "outDir": "dist", 
+  },
+  "include": ["src", "src/index.d.ts"],
+  "exclude": ["node_modules", "dist"]
+}

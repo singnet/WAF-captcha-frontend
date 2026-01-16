@@ -1,0 +1,28 @@
+{
+  "name": "waf-captcha-frontend",
+  "version": "0.0.1",
+  "description": "is a lightweight JavaScript/TypeScript library that provides seamless integration with AWS WAF Captcha for fetch-based HTTP requests. The package handles captcha challenges transparently, intercepting requests and displaying captcha modals when required by AWS WAF.",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "build:types": "tsc --emitDeclarationOnly"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "rollup": "^4.55.1",
+    "rollup-plugin-dts": "^6.3.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "axios": "^1.7.9"
+  }
+}
