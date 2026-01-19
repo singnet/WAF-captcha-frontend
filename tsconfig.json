@@ -7,9 +7,13 @@
     "declarationDir": "dist",
     "strict": true,
     "skipLibCheck": true,
-
-    "outDir": "dist", 
+    "outDir": "dist",
   },
-  "include": ["src", "src/index.d.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
