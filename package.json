@@ -14,9 +14,6 @@
     "build": "rollup -c",
     "build:types": "tsc --emitDeclarationOnly"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
