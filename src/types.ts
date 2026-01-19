@@ -10,15 +10,15 @@ export interface AwsWafCaptchaConfig {
 
 export interface AwsWafCaptcha {
   renderCaptcha: (
-    container: string | HTMLElement, 
+    container: string | HTMLElement,
     config: AwsWafCaptchaConfig
   ) => void;
 }
 
 export interface AwsWafIntegration {
-    fetch: typeof fetch;
-    hasToken: () => boolean;
-    getToken: () => Promise<string>;
+  fetch: typeof fetch;
+  hasToken: () => boolean;
+  getToken: () => Promise<string>;
 }
 
 declare global {
