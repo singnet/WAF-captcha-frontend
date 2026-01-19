@@ -7,7 +7,7 @@ export const ensureCaptchaContainer = (captchaContainerId: string, captchaConten
     container.id = captchaContentId;
     captchaContainer.appendChild(container);
   }
-  
+
   return container;
 };
 
@@ -15,7 +15,7 @@ export const ensureModalContainer = (captchaContainerId: string, overlayId = 'mo
   const captchaContainer = document.getElementById(captchaContainerId) ?? document.body;
   let overlay = document.getElementById(overlayId);
   let modal = document.getElementById(modalId);
-  
+
   if (!overlay) {
     overlay = document.createElement('div');
     overlay.id = 'modalOverlay';
@@ -33,7 +33,7 @@ export const ensureModalContainer = (captchaContainerId: string, overlayId = 'mo
     `;
     captchaContainer.appendChild(overlay);
   }
-  
+
   if (!modal) {
     modal = document.createElement('div');
     modal.id = 'modal';
@@ -45,7 +45,7 @@ export const ensureModalContainer = (captchaContainerId: string, overlayId = 'mo
     `;
     overlay.appendChild(modal);
   }
-  
+
   return { overlay, modal };
 };
 
@@ -57,11 +57,11 @@ export const showCaptchaModal = (
 ): void => {
   const { overlay, modal } = ensureModalContainer(captchaContainerId, overlayId, modalId);
   const captchaForm = ensureCaptchaContainer(captchaContainerId, captchaContentId);
-  
+
   if (captchaForm.parentElement !== modal) {
     modal.appendChild(captchaForm);
   }
-  
+
   overlay.style.display = 'flex';
 };
 
