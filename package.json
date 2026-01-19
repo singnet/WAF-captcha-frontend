@@ -11,7 +11,7 @@
     "build:types": "tsc --emitDeclarationOnly"
   },
   "publishConfig": {
-  "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [],
   "author": "",
@@ -24,8 +24,5 @@
     "rollup-plugin-dts": "^6.3.0",
     "tslib": "^2.8.1",
     "typescript": "^5.9.3"
-  },
-  "peerDependencies": {
-    "axios": "^1.7.9"
   }
 }
