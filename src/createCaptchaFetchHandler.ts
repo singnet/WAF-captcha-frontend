@@ -8,16 +8,10 @@ export const createCaptchaFetchHandler = (config: AWSWAFInterceptorConfig) => {
 
   const captchaFetch = (path: RequestInfo | URL, init: RequestInit): Promise<Response> => {
     const captchaForm = ensureCaptchaContainer(config.captchaContainerId, config?.captchaContentId);
-    showCaptchaModal(
-      config.captchaContainerId,
-      config?.captchaContentId,
-      config?.overlayId,
-      config?.modalId
-    );
 
     return new Promise((resolve, reject) => {
       if (!window.AwsWafCaptcha) {
-        reject(new Error('AwsWafCaptcha is not available'));
+        reject(new Error('AWS WAF Captcha is not available'));
         return;
       }
 
@@ -25,6 +19,13 @@ export const createCaptchaFetchHandler = (config: AWSWAFInterceptorConfig) => {
         reject(new Error('AwsWafIntegration is not available'));
         return;
       }
+
+      showCaptchaModal(
+        config.captchaContainerId,
+        config?.captchaContentId,
+        config?.overlayId,
+        config?.modalId
+      );
 
       window.AwsWafCaptcha.renderCaptcha(captchaForm, {
         onSuccess: () => {
